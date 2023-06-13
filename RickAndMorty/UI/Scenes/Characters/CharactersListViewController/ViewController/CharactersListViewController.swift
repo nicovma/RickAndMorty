@@ -78,9 +78,6 @@ extension CharactersListViewController: CharactersListViewModelDelegate {
     
     func onError(error: String) {
         hideLoading()
-//        dateLabel.text = viewModel?.dateText
-        adapter?.items = []
-        tableView.reloadData()
         showError(title: STRINGS.errorTitle, description: error)
     }
 }
@@ -99,7 +96,6 @@ extension CharactersListViewController {
             if let charactersDetailViewController = segue.destination as? CharactersDetailViewController, let sender = sender as? Int{
                 charactersDetailViewController.viewModel.rawResponse = viewModel?.rawResponse?.results[sender]
             } else {
-                // TODO: I18N
                 showError(title: STRINGS.errorTitle, description: STRINGS.errorGenericDescription)
             }
         }
