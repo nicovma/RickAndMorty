@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="Ilv-jP-bTg" customClass="ErrorView" customModule="RickAndMorty" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PVA-bl-oix">
+                    <rect key="frame" x="48" y="259" width="297" height="230"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8wM-2h-OO3">
+                            <rect key="frame" x="16" y="16" width="265" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TL6-9p-uB7">
+                            <rect key="frame" x="16" y="53.000000000000007" width="265" height="101.66666666666669"/>
+                            <string key="text">errorDescription errorDescription errorDescription errorDescription errorDescription errorDescription errorDescription errorDescription errorDescription</string>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ii3-hr-eeJ">
+                            <rect key="frame" x="228.66666666666669" y="178.66666666666669" width="52.333333333333314" height="34.333333333333343"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="OK!"/>
+                            <connections>
+                                <action selector="okPressed:" destination="Ilv-jP-bTg" eventType="touchUpInside" id="giG-4e-7fk"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="Ii3-hr-eeJ" secondAttribute="bottom" constant="16.999999999999972" id="0aE-iQ-cjD"/>
+                        <constraint firstItem="TL6-9p-uB7" firstAttribute="top" secondItem="8wM-2h-OO3" secondAttribute="bottom" constant="16" id="67H-MJ-97Z"/>
+                        <constraint firstAttribute="trailing" secondItem="Ii3-hr-eeJ" secondAttribute="trailing" constant="16" id="BBU-zB-1Zx"/>
+                        <constraint firstAttribute="trailing" secondItem="8wM-2h-OO3" secondAttribute="trailing" constant="16" id="ERl-9W-kvZ"/>
+                        <constraint firstAttribute="trailing" secondItem="TL6-9p-uB7" secondAttribute="trailing" constant="16" id="V8v-v4-axr"/>
+                        <constraint firstItem="TL6-9p-uB7" firstAttribute="leading" secondItem="8wM-2h-OO3" secondAttribute="leading" id="byK-K4-brz"/>
+                        <constraint firstItem="8wM-2h-OO3" firstAttribute="top" secondItem="PVA-bl-oix" secondAttribute="top" constant="16" id="dxN-Mr-3Vb"/>
+                        <constraint firstItem="Ii3-hr-eeJ" firstAttribute="top" secondItem="TL6-9p-uB7" secondAttribute="bottom" constant="24" id="oHe-G2-Zt8"/>
+                        <constraint firstItem="8wM-2h-OO3" firstAttribute="leading" secondItem="PVA-bl-oix" secondAttribute="leading" constant="16" id="u9f-4n-vL8"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="pR5-Zo-MSv"/>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.29574150440000002" colorSpace="custom" customColorSpace="displayP3"/>
+            <constraints>
+                <constraint firstItem="pR5-Zo-MSv" firstAttribute="trailing" secondItem="PVA-bl-oix" secondAttribute="trailing" constant="48" id="CdI-dO-QoX"/>
+                <constraint firstItem="PVA-bl-oix" firstAttribute="leading" secondItem="pR5-Zo-MSv" secondAttribute="leading" constant="48" id="bMs-tV-tO8"/>
+                <constraint firstItem="PVA-bl-oix" firstAttribute="centerX" secondItem="pR5-Zo-MSv" secondAttribute="centerX" id="rmc-Iw-ocW"/>
+                <constraint firstItem="PVA-bl-oix" firstAttribute="top" secondItem="pR5-Zo-MSv" secondAttribute="top" constant="200" id="zLz-TV-31t"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="errorDescriptionLabel" destination="TL6-9p-uB7" id="5jq-oE-lEJ"/>
+                <outlet property="errorTitleLabel" destination="8wM-2h-OO3" id="PBY-fE-9sX"/>
+            </connections>
+            <point key="canvasLocation" x="-908" y="-282"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
