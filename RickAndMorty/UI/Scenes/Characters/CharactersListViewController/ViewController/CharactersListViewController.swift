@@ -56,7 +56,6 @@ class CharactersListViewController: BaseViewController {
         showLoading()
         viewModel?.loadData()
     }
-
 }
 
 extension CharactersListViewController: CharactersListViewModelDelegate {
@@ -96,6 +95,7 @@ extension CharactersListViewController: CharactersListAdapterDelegate {
 }
 
 extension CharactersListViewController {
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showCharacterDetail" {
             if let charactersDetailViewController = segue.destination as? CharactersDetailViewController, let sender = sender as? Int{

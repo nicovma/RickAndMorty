@@ -11,7 +11,7 @@ import UIKit
 class CharactersDetailViewController: BaseViewController {
     
     // MARK: - Outlets
-    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var tableView: UITableView!
     
     // MARK: - Properties
     var viewModel: CharactersDetailViewModel = CharactersDetailViewModel()

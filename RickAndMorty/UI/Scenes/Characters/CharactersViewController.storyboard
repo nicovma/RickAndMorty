@@ -117,25 +117,38 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E0D-82-bmA">
-                                <rect key="frame" x="147" y="360" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="lNj-92-1Wz">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="mj2-rM-pdb">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mj2-rM-pdb" id="bXB-Gm-Z0g">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Kzh-Gp-krW"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Kzh-Gp-krW" firstAttribute="trailing" secondItem="lNj-92-1Wz" secondAttribute="trailing" id="hPo-bN-bM2"/>
+                            <constraint firstItem="lNj-92-1Wz" firstAttribute="leading" secondItem="Kzh-Gp-krW" secondAttribute="leading" id="jOK-gU-Mat"/>
+                            <constraint firstItem="lNj-92-1Wz" firstAttribute="top" secondItem="Kzh-Gp-krW" secondAttribute="top" id="sem-Yq-H6v"/>
+                            <constraint firstItem="Kzh-Gp-krW" firstAttribute="bottom" secondItem="lNj-92-1Wz" secondAttribute="bottom" id="tpf-5E-8SP"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="2VP-Xi-Qj5"/>
                     <connections>
-                        <outlet property="nameLabel" destination="E0D-82-bmA" id="QYi-gn-XDj"/>
+                        <outlet property="tableView" destination="lNj-92-1Wz" id="UDA-or-aAt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rdt-1D-B8b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1326" y="-2"/>
+            <point key="canvasLocation" x="1325.9541984732823" y="-2.1126760563380285"/>
         </scene>
     </scenes>
     <resources>
