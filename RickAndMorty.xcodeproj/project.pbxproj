@@ -33,6 +33,8 @@
 		4AE0E9772A37BB83006A1676 /* CharacterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4AE0E9762A37BB83006A1676 /* CharacterCell.xib */; };
 		4AE0E9792A37BE06006A1676 /* CharactersListViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE0E9782A37BE06006A1676 /* CharactersListViewAdapter.swift */; };
 		4AE0E97B2A37C197006A1676 /* CharactersDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE0E97A2A37C197006A1676 /* CharactersDetailViewController.swift */; };
+		4AE0E97D2A39010B006A1676 /* CharactersListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE0E97C2A39010B006A1676 /* CharactersListViewModel.swift */; };
+		4AE0E97F2A3901BE006A1676 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE0E97E2A3901BE006A1676 /* Constants.swift */; };
 		53E35C86F1F2FB00479D37AC /* Pods_RickAndMortyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE0800DA2D1836F8F7E4CD46 /* Pods_RickAndMortyTests.framework */; };
 		59C8B89A033CAB712B99D0A3 /* Pods_RickAndMorty.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 963582E7BCE463BD08C00600 /* Pods_RickAndMorty.framework */; };
 /* End PBXBuildFile section */
@@ -86,6 +88,8 @@
 		4AE0E9762A37BB83006A1676 /* CharacterCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CharacterCell.xib; sourceTree = "<group>"; };
 		4AE0E9782A37BE06006A1676 /* CharactersListViewAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersListViewAdapter.swift; sourceTree = "<group>"; };
 		4AE0E97A2A37C197006A1676 /* CharactersDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersDetailViewController.swift; sourceTree = "<group>"; };
+		4AE0E97C2A39010B006A1676 /* CharactersListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CharactersListViewModel.swift; path = ../../../../../../../../.Trash/RickAndMortya/RickAndMorty/UI/Scenes/Characters/CharactersListViewController/ViewModel/CharactersListViewModel.swift; sourceTree = "<group>"; };
+		4AE0E97E2A3901BE006A1676 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		91651606D4B4C9FB5787EC47 /* Pods_RickAndMorty_RickAndMortyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RickAndMorty_RickAndMortyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		963582E7BCE463BD08C00600 /* Pods_RickAndMorty.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RickAndMorty.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A665FE06E9114D228E64D9E6 /* Pods-RickAndMorty.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RickAndMorty.release.xcconfig"; path = "Target Support Files/Pods-RickAndMorty/Pods-RickAndMorty.release.xcconfig"; sourceTree = "<group>"; };
@@ -185,8 +189,8 @@
 			isa = PBXGroup;
 			children = (
 				4ABFA6E62A37A26600A29CC7 /* UI */,
-				4ABFA6E52A37A25900A29CC7 /* Manager */,
 				4ABFA6E42A37A24500A29CC7 /* Extensions */,
+				4AE0E97E2A3901BE006A1676 /* Constants.swift */,
 				4ABFA6B42A37A21B00A29CC7 /* AppDelegate.swift */,
 				4ABFA6B62A37A21B00A29CC7 /* SceneDelegate.swift */,
 				4ABFA6BD2A37A21D00A29CC7 /* Assets.xcassets */,
@@ -221,13 +225,6 @@
 				4A8437C22A37ABB3005B7C57 /* UIImageView+Download.swift */,
 			);
 			path = Extensions;
-			sourceTree = "<group>";
-		};
-		4ABFA6E52A37A25900A29CC7 /* Manager */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Manager;
 			sourceTree = "<group>";
 		};
 		4ABFA6E62A37A26600A29CC7 /* UI */ = {
@@ -324,6 +321,7 @@
 		4ABFA6F02A37A32F00A29CC7 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				4AE0E97C2A39010B006A1676 /* CharactersListViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -665,6 +663,8 @@
 				4A8437CF2A37AD3F005B7C57 /* ErrorView.swift in Sources */,
 				4A8437C72A37ACD7005B7C57 /* UIViewController+Generics.swift in Sources */,
 				4AE0E9732A37BB06006A1676 /* CharactersListModel.swift in Sources */,
+				4AE0E97D2A39010B006A1676 /* CharactersListViewModel.swift in Sources */,
+				4AE0E97F2A3901BE006A1676 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

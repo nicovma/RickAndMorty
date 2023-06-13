@@ -15,44 +15,45 @@ class CharactersListViewController: BaseViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var pageLabel: UILabel!
     
+    @IBOutlet weak var previousPageButton: UIButton!
+    @IBOutlet weak var nextPageButton: UIButton!
+    
     // MARK: - Properties
     
     private var adapter: CharactersListViewAdapter?
-//    private var viewModel: HomeViewModel?
+    private var viewModel: CharactersListViewModel?
     
     // MARK: - Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.register(cell: CharacterCell.self)
-//        tableView.register(cell: NoMatchesCell.self)
         tableView.separatorStyle = .none
         adapter = CharactersListViewAdapter(delegate: self)
         tableView.dataSource = adapter
         tableView.delegate = adapter
-//        viewModel = HomeViewModel(delegate: self)
-//        dateLabel.text = viewModel?.dateText
-//        searchData()
+        viewModel = CharactersListViewModel(delegate: self)
+        pageLabel.text = viewModel?.pageText
+        searchData()
     }
     
     // MARK: - Actions and selectors
     
     @IBAction func addPageButtonPressed(_ sender: Any) {
-        showLoading()
-//        viewModel?.addDay(quantity: 1)
-//        searchData()
+        viewModel?.addPage()
+        searchData()
     }
+    
     @IBAction func subtractPageButtonPressed(_ sender: Any) {
-        showError(title: "Error", description: "This is an error description")
-//        viewModel?.subtractDay(quantity: 1)
-//        searchData()
+        viewModel?.subtractPage()
+        searchData()
     }
     
     // MARK: - public methods
     
     func searchData() {
-//        showLoading()
-//        viewModel?.loadData()
+        showLoading()
+        viewModel?.loadData()
     }
 
 }
@@ -60,24 +61,28 @@ class CharactersListViewController: BaseViewController {
 extension CharactersListViewController: CharactersListViewModelDelegate {
     
     func onSuccess(responseCase: CharactersListResponse) {
-//        dateLabel.text = viewModel?.dateText
-//        hideLoading()
-//        switch responseCase {
-//        case .loadData:
-//            if let viewModel = viewModel, let uiItems = viewModel.uiItems, let adapter = adapter {
-//                adapter.items = uiItems
-//                tableView.reloadData()
-//            } else {
-//                showError(title: NSLocalizedString("Error.title", comment: ""), description: NSLocalizedString("Error.genericDescription", comment: ""))
-//            }
-//        }
+        pageLabel.text = viewModel?.pageText
+        hideLoading()
+        switch responseCase {
+        case .loadData:
+            if let viewModel = viewModel, let uiItems = viewModel.uiItems, let adapter = adapter {
+                previousPageButton.isHidden = !viewModel.showPrev
+                nextPageButton.isHidden = !viewModel.showNext
+                adapter.items = uiItems
+                tableView.reloadData()
+            } else {
+                // TODO: I18N
+                showError(title: NSLocalizedString("Error.title", comment: ""), description: NSLocalizedString("Error.genericDescription", comment: ""))
+            }
+        }
     }
     
     func onError(error: String) {
         hideLoading()
 //        dateLabel.text = viewModel?.dateText
-//        adapter?.items = []
-//        tableView.reloadData()
+        adapter?.items = []
+        tableView.reloadData()
+        // TODO: I18N
         showError(title: NSLocalizedString("Error.title", comment: ""), description: error)
     }
 }
@@ -87,8 +92,6 @@ extension CharactersListViewController: CharactersListAdapterDelegate {
     func showCharacterDetail() {
         performSegue(withIdentifier: "showCharacterDetail", sender: self)
     }
-    
-    
 }
 
 extension CharactersListViewController {

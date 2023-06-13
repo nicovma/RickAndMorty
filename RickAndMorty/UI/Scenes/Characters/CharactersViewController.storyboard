@@ -28,7 +28,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DnD-LQ-hYd">
                                 <rect key="frame" x="-11" y="0.0" width="414" height="90"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sxx-kO-OtD">
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sxx-kO-OtD">
                                         <rect key="frame" x="348" y="38.666666666666664" width="50" height="49.999999999999993"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="HgD-e3-qir"/>
@@ -46,7 +46,7 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ruz-Ou-T7k">
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ruz-Ou-T7k">
                                         <rect key="frame" x="16" y="38.666666666666664" width="50" height="49.999999999999993"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="50" id="FRL-EE-0tb"/>
@@ -98,7 +98,9 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="nextPageButton" destination="sxx-kO-OtD" id="pZi-qR-I4j"/>
                         <outlet property="pageLabel" destination="MUE-P6-Osb" id="Fg7-Ve-AsR"/>
+                        <outlet property="previousPageButton" destination="ruz-Ou-T7k" id="zBa-ia-YQ7"/>
                         <outlet property="tableView" destination="IoR-aB-7HM" id="H7P-1s-vyt"/>
                         <segue destination="cuY-ze-50T" kind="show" identifier="showCharacterDetail" id="3Iu-2X-Pbj"/>
                     </connections>

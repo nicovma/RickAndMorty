@@ -52,6 +52,11 @@
                         <constraint firstItem="Ii3-hr-eeJ" firstAttribute="top" secondItem="TL6-9p-uB7" secondAttribute="bottom" constant="24" id="oHe-G2-Zt8"/>
                         <constraint firstItem="8wM-2h-OO3" firstAttribute="leading" secondItem="PVA-bl-oix" secondAttribute="leading" constant="16" id="u9f-4n-vL8"/>
                     </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="10"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
                 </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="pR5-Zo-MSv"/>

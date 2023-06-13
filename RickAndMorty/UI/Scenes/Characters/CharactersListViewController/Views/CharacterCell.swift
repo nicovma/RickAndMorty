@@ -11,7 +11,8 @@ import UIKit
 class CharacterCell: UITableViewCell {
     
     // MARK: - Outlets
-
+    @IBOutlet weak var nameLabel: UILabel!
+    
     
     // MARK: - Lifecycle
     
@@ -22,7 +23,7 @@ class CharacterCell: UITableViewCell {
     
     // MARK: - Public Methods
     
-    func setItemInformation(itemInformation: CharacterInformation) {
-      
+    func setItemInformation(itemInformation: CharacterUIItems) {
+        nameLabel.text = itemInformation.name
     }
 }
