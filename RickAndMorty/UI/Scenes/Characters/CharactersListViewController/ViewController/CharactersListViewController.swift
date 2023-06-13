@@ -71,8 +71,7 @@ extension CharactersListViewController: CharactersListViewModelDelegate {
                 adapter.items = uiItems
                 tableView.reloadData()
             } else {
-                // TODO: I18N
-                showError(title: NSLocalizedString("Error.title", comment: ""), description: NSLocalizedString("Error.genericDescription", comment: ""))
+                showError(title: STRINGS.errorTitle, description: STRINGS.errorGenericDescription)
             }
         }
     }
@@ -82,8 +81,7 @@ extension CharactersListViewController: CharactersListViewModelDelegate {
 //        dateLabel.text = viewModel?.dateText
         adapter?.items = []
         tableView.reloadData()
-        // TODO: I18N
-        showError(title: NSLocalizedString("Error.title", comment: ""), description: error)
+        showError(title: STRINGS.errorTitle, description: error)
     }
 }
 
@@ -102,7 +100,7 @@ extension CharactersListViewController {
                 charactersDetailViewController.viewModel.rawResponse = viewModel?.rawResponse?.results[sender]
             } else {
                 // TODO: I18N
-                showError(title: NSLocalizedString("Error.title", comment: ""), description: NSLocalizedString("Error.genericDescription", comment: ""))
+                showError(title: STRINGS.errorTitle, description: STRINGS.errorGenericDescription)
             }
         }
     }

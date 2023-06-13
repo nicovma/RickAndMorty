@@ -12,3 +12,10 @@ struct ENDPOINTS {
     static let locations = "https://rickandmortyapi.com/api/location"
     static let episodes = "https://rickandmortyapi.com/api/episode"
 }
+
+struct STRINGS {
+    static let errorTitle = "Error!"
+    static let errorGenericDescription = "Unexpected error."
+    static let loading = "Loading"
+    static let page = "Page "
+}
