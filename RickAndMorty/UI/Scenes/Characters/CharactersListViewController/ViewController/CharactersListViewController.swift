@@ -28,6 +28,7 @@ class CharactersListViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.register(cell: CharacterCell.self)
+        tableView.register(cell: NoCharacterCell.self)
         tableView.separatorStyle = .none
         adapter = CharactersListViewAdapter(delegate: self)
         tableView.dataSource = adapter
@@ -89,19 +90,20 @@ extension CharactersListViewController: CharactersListViewModelDelegate {
 
 extension CharactersListViewController: CharactersListAdapterDelegate {
     
-    func showCharacterDetail() {
-        performSegue(withIdentifier: "showCharacterDetail", sender: self)
+    func showCharacterDetail(index: Int) {
+        performSegue(withIdentifier: "showCharacterDetail", sender: index)
     }
 }
 
 extension CharactersListViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if segue.identifier == "showCharacterDetail" {
-//            if let charactersDetailViewController = segue.destination as? CharactersDetailViewController, let sender = sender as? String{
-//                leagueDetailViewController.viewModel.leagueCode = sender
-//            } else {
-//                showError(title: NSLocalizedString("Error.title", comment: ""), description: NSLocalizedString("Error.genericDescription", comment: ""))
-//            }
-//        }
+        if segue.identifier == "showCharacterDetail" {
+            if let charactersDetailViewController = segue.destination as? CharactersDetailViewController, let sender = sender as? Int{
+                charactersDetailViewController.viewModel.rawResponse = viewModel?.rawResponse?.results[sender]
+            } else {
+                // TODO: I18N
+                showError(title: NSLocalizedString("Error.title", comment: ""), description: NSLocalizedString("Error.genericDescription", comment: ""))
+            }
+        }
     }
 }

@@ -26,6 +26,7 @@ class LoadingView: UIView {
         if let title = title {
             loadingLabel.text =  title
         } else {
+            // TODO: I18N
 //            loadingLabel.text = NSLocalizedString("LoadingView.loading", comment: "")
         }
     }

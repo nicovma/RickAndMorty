@@ -11,24 +11,19 @@ import UIKit
 class CharactersDetailViewController: BaseViewController {
     
     // MARK: - Outlets
-    
-
+    @IBOutlet weak var nameLabel: UILabel!
     
     // MARK: - Properties
-    
+    var viewModel: CharactersDetailViewModel = CharactersDetailViewModel()
     
     // MARK: - Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
     }
     
     // MARK: - Actions and selectors
     
-    @IBAction func backButtonPressed(_ sender: Any) {
-        navigationController?.popViewController(animated: true)
-    }
     
     // MARK: - public methods
     

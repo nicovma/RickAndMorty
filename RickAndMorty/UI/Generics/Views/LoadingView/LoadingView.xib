@@ -52,8 +52,8 @@
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
-                <outlet property="indicator" destination="JoZ-cj-Ik8" id="L0e-CV-bFE"/>
-                <outlet property="loadingLabel" destination="ely-bJ-mf8" id="mzI-98-jtD"/>
+                <outlet property="indicator" destination="JoZ-cj-Ik8" id="lGK-nI-BkO"/>
+                <outlet property="loadingLabel" destination="ely-bJ-mf8" id="pfP-M3-PZ4"/>
             </connections>
             <point key="canvasLocation" x="222" y="-44"/>
         </view>

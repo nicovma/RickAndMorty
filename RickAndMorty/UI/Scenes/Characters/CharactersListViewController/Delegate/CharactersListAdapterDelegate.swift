@@ -8,5 +8,5 @@
 import Foundation
 
 protocol CharactersListAdapterDelegate: AnyObject {
-    func showCharacterDetail()
+    func showCharacterDetail(index: Int)
 }

@@ -32,7 +32,7 @@ extension CharactersListViewAdapter: UITableViewDataSource, UITableViewDelegate 
             cell.setItemInformation(itemInformation: data)
             return cell
         case .noCharacter:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "CharacterCell", for: indexPath) as! CharacterCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: "NoCharacterCell", for: indexPath) as! NoCharacterCell
             return cell
         }
     }
@@ -46,7 +46,7 @@ extension CharactersListViewAdapter: UITableViewDataSource, UITableViewDelegate 
         
         switch items[indexPath.section] {
             case .data(_):
-                delegate.showCharacterDetail()
+                delegate.showCharacterDetail(index: indexPath.row)
                 break
             case .noCharacter:
                 break
