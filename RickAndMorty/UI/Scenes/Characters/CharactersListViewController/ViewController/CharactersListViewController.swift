@@ -116,6 +116,11 @@ class CharactersListViewController: BaseViewController {
     
     func setupView() {
         titleLabel.text = viewModel?.pageText
+        
+        filterTextField.borderStyle = .roundedRect
+        filterTextField.layer.cornerRadius = 12
+        filterTextField.clipsToBounds = true
+        
         filterButton.isEnabled = false
         removeFilterButton.isHidden = true
         filterTextField.placeholder = STRINGS.filterPlaceholder
@@ -129,7 +134,7 @@ extension CharactersListViewController: CharactersListViewModelDelegate {
         switch responseCase {
         case .loadData:
             if let viewModel = viewModel, let uiItems = viewModel.uiItems, let adapter = adapter {
-                titleLabel.text = viewModel.isFilteredResponse ? STRINGS.filtered : viewModel.pageText
+                titleLabel.text = viewModel.isFilteredResponse ? STRINGS.filtered + viewModel.pageText : viewModel.pageText
                 filterButton.isEnabled = false
                 removeFilterButton.isHidden = viewModel.isFilteredResponse ? false : true
                 previousPageButton.isHidden = !viewModel.showPrev
