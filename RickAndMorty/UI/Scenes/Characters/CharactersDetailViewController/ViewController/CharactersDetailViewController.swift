@@ -30,11 +30,7 @@ class CharactersDetailViewController: BaseViewController {
         tableView.dataSource = adapter
         tableView.delegate = adapter
         setupView()
-        
     }
-    
-    // MARK: - Actions and selectors
-    
     
     // MARK: - public methods
     
@@ -46,5 +42,4 @@ class CharactersDetailViewController: BaseViewController {
             showError(title: STRINGS.errorTitle, description: STRINGS.errorGenericDescription)
         }
     }
-
 }

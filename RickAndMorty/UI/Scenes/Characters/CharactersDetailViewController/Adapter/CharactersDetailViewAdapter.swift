@@ -35,9 +35,7 @@ extension CharactersDetailViewAdapter: UITableViewDataSource, UITableViewDelegat
             cell.setItemInformation(itemInformation: episodeNumber)
             return cell
         }
-        
     }
-    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return items.count

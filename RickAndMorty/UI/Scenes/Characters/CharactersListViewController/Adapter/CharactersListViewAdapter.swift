@@ -8,8 +8,6 @@
 import Foundation
 import UIKit
 
-// MARK: - Properties
-
 class CharactersListViewAdapter: NSObject {
     
     // MARK: - Properties
@@ -36,7 +34,6 @@ extension CharactersListViewAdapter: UITableViewDataSource, UITableViewDelegate 
             return cell
         }
     }
-    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         items.count

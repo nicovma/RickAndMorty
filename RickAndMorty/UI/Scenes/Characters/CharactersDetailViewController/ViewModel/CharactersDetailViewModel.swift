@@ -35,8 +35,6 @@ class CharactersDetailViewModel {
                 items.append(.episode(lastComponent))
             }
         }
-        
         return items
-        
     }
 }

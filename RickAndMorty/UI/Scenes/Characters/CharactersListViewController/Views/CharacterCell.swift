@@ -11,6 +11,7 @@ import UIKit
 class CharacterCell: UITableViewCell {
     
     // MARK: - Outlets
+    
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var statusLabel: UILabel!
     @IBOutlet weak var typeLabel: UILabel!
@@ -52,6 +53,5 @@ class CharacterCell: UITableViewCell {
             statusView.backgroundColor = UIColor.gray
             break
         }
-        
     }
 }

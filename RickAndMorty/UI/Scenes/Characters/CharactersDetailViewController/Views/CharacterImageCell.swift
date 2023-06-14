@@ -50,7 +50,6 @@ class CharacterImageCell: UITableViewCell {
         case .unknown:
             statusView.backgroundColor = UIColor.gray
             break
-        }
-        
+        }   
     }
 }
