@@ -64,12 +64,14 @@ class CharactersListViewController: BaseViewController {
             return
         }
         filterTextField.resignFirstResponder()
+        viewModel.pageNumber = 1
         viewModel.filterText = filteredText
         searchData()
     }
     
     @IBAction func removeFilterButtonPressed(_ sender: Any) {
         filterTextField.text = ""
+        viewModel?.pageNumber = 1
         viewModel?.filterText = ""
         searchData()
     }
