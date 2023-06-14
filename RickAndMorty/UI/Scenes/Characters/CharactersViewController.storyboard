@@ -130,7 +130,7 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" image="clear.fill" catalog="system"/>
                                         <connections>
-                                            <action selector="removeRilterButtonPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="BVY-i4-leO"/>
+                                            <action selector="removeFilterButtonPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="BVY-i4-leO"/>
                                         </connections>
                                     </button>
                                 </subviews>

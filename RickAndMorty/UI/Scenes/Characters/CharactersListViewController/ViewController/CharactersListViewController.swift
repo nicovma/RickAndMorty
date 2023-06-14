@@ -49,10 +49,6 @@ class CharactersListViewController: BaseViewController {
     
     // MARK: - Actions and selectors
     
-    @objc func dismissKeyboard() {
-        view.endEditing(true)
-    }
-    
     @IBAction func addPageButtonPressed(_ sender: Any) {
         viewModel?.addPage()
         searchData()
@@ -67,11 +63,12 @@ class CharactersListViewController: BaseViewController {
         guard let viewModel = viewModel, let filteredText = filterTextField.text else {
             return
         }
+        filterTextField.resignFirstResponder()
         viewModel.filterText = filteredText
         searchData()
     }
     
-    @IBAction func removeRilterButtonPressed(_ sender: Any) {
+    @IBAction func removeFilterButtonPressed(_ sender: Any) {
         filterTextField.text = ""
         viewModel?.filterText = ""
         searchData()
@@ -115,10 +112,6 @@ class CharactersListViewController: BaseViewController {
     }
     
     func setupView() {
-        // Gesture to close keyboard
-        let tap = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
-        view.addGestureRecognizer(tap)
-        
         titleLabel.text = viewModel?.pageText
         filterButton.isEnabled = false
         removeFilterButton.isHidden = true
