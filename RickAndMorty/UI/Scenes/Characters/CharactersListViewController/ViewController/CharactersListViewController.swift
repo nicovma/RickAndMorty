@@ -111,6 +111,7 @@ class CharactersListViewController: BaseViewController {
     func searchData() {
         showLoading()
         viewModel?.loadData()
+        tableView.setContentOffset(.zero, animated: true)
     }
     
     func setupView() {
