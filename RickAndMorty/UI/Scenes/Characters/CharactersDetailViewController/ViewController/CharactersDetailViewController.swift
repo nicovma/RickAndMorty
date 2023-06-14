@@ -11,9 +11,11 @@ import UIKit
 class CharactersDetailViewController: BaseViewController {
     
     // MARK: - Outlets
+    
     @IBOutlet weak var tableView: UITableView!
     
     // MARK: - Properties
+    
     private var adapter: CharactersDetailViewAdapter = CharactersDetailViewAdapter()
     var viewModel: CharactersDetailViewModel = CharactersDetailViewModel()
     

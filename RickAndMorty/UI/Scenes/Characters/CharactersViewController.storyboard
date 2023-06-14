@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -71,7 +72,7 @@
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="IoR-aB-7HM">
-                                <rect key="frame" x="0.0" y="94" width="393" height="724"/>
+                                <rect key="frame" x="0.0" y="140" width="393" height="678"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="84y-cy-WJy">
@@ -84,30 +85,98 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SxS-aD-lCd">
+                                <rect key="frame" x="0.0" y="90" width="393" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PGL-ko-8jM">
+                                        <rect key="frame" x="343" y="8" width="34" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="34" id="PQu-Iv-Dat"/>
+                                            <constraint firstAttribute="height" constant="34" id="eJy-G8-4Ip"/>
+                                        </constraints>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled">
+                                            <imageReference key="image" image="magnifyingglass" catalog="system" symbolScale="medium" renderingMode="hierarchical" variableValue="1">
+                                                <hierarchicalColors>
+                                                    <color name="AccentColor"/>
+                                                    <color systemColor="secondaryLabelColor"/>
+                                                    <color systemColor="tertiaryLabelColor"/>
+                                                </hierarchicalColors>
+                                            </imageReference>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="filterButtonPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="2gJ-4k-Erw"/>
+                                        </connections>
+                                    </button>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Az7-x7-eex">
+                                        <rect key="frame" x="16" y="11" width="319" height="28"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="28" id="Txp-M7-QBp"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="filterValueChange:" destination="Y6W-OH-hqX" eventType="editingChanged" id="w3v-fj-Pgg"/>
+                                        </connections>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H09-FZ-rHB">
+                                        <rect key="frame" x="302" y="12.666666666666671" width="25" height="25"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="25" id="OTp-IL-8Za"/>
+                                            <constraint firstAttribute="height" constant="25" id="awA-YG-d9T"/>
+                                        </constraints>
+                                        <color key="tintColor" systemColor="systemPinkColor"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="clear.fill" catalog="system"/>
+                                        <connections>
+                                            <action selector="removeRilterButtonPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="BVY-i4-leO"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" name="AccentColor"/>
+                                <constraints>
+                                    <constraint firstItem="H09-FZ-rHB" firstAttribute="centerY" secondItem="Az7-x7-eex" secondAttribute="centerY" id="4DW-hM-jNf"/>
+                                    <constraint firstAttribute="height" constant="50" id="Adz-vm-n1s"/>
+                                    <constraint firstItem="PGL-ko-8jM" firstAttribute="leading" secondItem="Az7-x7-eex" secondAttribute="trailing" constant="8" id="BgJ-Lf-4qv"/>
+                                    <constraint firstItem="PGL-ko-8jM" firstAttribute="leading" secondItem="H09-FZ-rHB" secondAttribute="trailing" constant="16" id="C0Q-oj-UXV"/>
+                                    <constraint firstItem="PGL-ko-8jM" firstAttribute="centerY" secondItem="SxS-aD-lCd" secondAttribute="centerY" id="FVW-pz-F6H"/>
+                                    <constraint firstAttribute="trailing" secondItem="PGL-ko-8jM" secondAttribute="trailing" constant="16" id="KPj-Iz-ze0"/>
+                                    <constraint firstItem="Az7-x7-eex" firstAttribute="centerY" secondItem="PGL-ko-8jM" secondAttribute="centerY" id="YAf-Kh-obX"/>
+                                    <constraint firstItem="H09-FZ-rHB" firstAttribute="centerY" secondItem="PGL-ko-8jM" secondAttribute="centerY" id="g9i-dm-Gbu"/>
+                                    <constraint firstItem="Az7-x7-eex" firstAttribute="leading" secondItem="SxS-aD-lCd" secondAttribute="leading" constant="16" id="lvo-dC-0zm"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="IoR-aB-7HM" firstAttribute="top" secondItem="SxS-aD-lCd" secondAttribute="bottom" id="2HK-Rg-BI5"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="leading" secondItem="DnD-LQ-hYd" secondAttribute="leading" constant="11" id="8f0-PL-UuY"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="IoR-aB-7HM" secondAttribute="trailing" id="Bhc-vW-luA"/>
                             <constraint firstItem="DnD-LQ-hYd" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="Dds-XN-tMp"/>
-                            <constraint firstItem="IoR-aB-7HM" firstAttribute="top" secondItem="DnD-LQ-hYd" secondAttribute="bottom" constant="4" id="UaI-Bb-QzA"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="SxS-aD-lCd" secondAttribute="trailing" id="E7J-av-zcy"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="leading" secondItem="IoR-aB-7HM" secondAttribute="leading" id="VOM-xr-1Ob"/>
+                            <constraint firstItem="SxS-aD-lCd" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="cxD-Us-DPc"/>
+                            <constraint firstItem="SxS-aD-lCd" firstAttribute="top" secondItem="DnD-LQ-hYd" secondAttribute="bottom" id="f3R-HF-eOZ"/>
                             <constraint firstItem="DnD-LQ-hYd" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" constant="10" id="p3u-Cp-eDF"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="IoR-aB-7HM" secondAttribute="bottom" id="xgU-05-FRb"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="filterButton" destination="PGL-ko-8jM" id="hRV-RE-qoo"/>
+                        <outlet property="filterTextField" destination="Az7-x7-eex" id="pQD-WU-6f4"/>
                         <outlet property="nextPageButton" destination="sxx-kO-OtD" id="pZi-qR-I4j"/>
-                        <outlet property="pageLabel" destination="MUE-P6-Osb" id="Fg7-Ve-AsR"/>
                         <outlet property="previousPageButton" destination="ruz-Ou-T7k" id="zBa-ia-YQ7"/>
+                        <outlet property="removeFilterButton" destination="H09-FZ-rHB" id="OkW-sC-QKt"/>
                         <outlet property="tableView" destination="IoR-aB-7HM" id="H7P-1s-vyt"/>
+                        <outlet property="titleLabel" destination="MUE-P6-Osb" id="Fg7-Ve-AsR"/>
                         <segue destination="cuY-ze-50T" kind="show" identifier="showCharacterDetail" id="3Iu-2X-Pbj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="127" y="4"/>
+            <point key="canvasLocation" x="125.95419847328243" y="3.5211267605633805"/>
         </scene>
         <!--Characters Detail View Controller-->
         <scene sceneID="eVw-Oh-JG5">
@@ -154,11 +223,22 @@
     <resources>
         <image name="arrow.left.circle.fill" catalog="system" width="128" height="123"/>
         <image name="arrow.right.circle.fill" catalog="system" width="128" height="123"/>
+        <image name="clear.fill" catalog="system" width="128" height="114"/>
+        <image name="magnifyingglass" catalog="system" width="128" height="117"/>
         <namedColor name="AccentColor">
             <color red="0.015686274509803921" green="0.87058823529411766" blue="0.44313725490196076" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tertiaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29803921568627451" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

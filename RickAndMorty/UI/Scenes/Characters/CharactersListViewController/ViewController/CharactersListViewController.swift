@@ -12,11 +12,21 @@ class CharactersListViewController: BaseViewController {
 
     // MARK: - Outlets
     
+    // tableView
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var pageLabel: UILabel!
     
+    // labels
+    @IBOutlet weak var titleLabel: UILabel!
+    
+    // textFields
+    @IBOutlet weak var filterTextField: UITextField!
+    
+    // buttons
     @IBOutlet weak var previousPageButton: UIButton!
     @IBOutlet weak var nextPageButton: UIButton!
+    @IBOutlet weak var filterButton: UIButton!
+    @IBOutlet weak var removeFilterButton: UIButton!
+    
     
     // MARK: - Properties
     
@@ -34,7 +44,7 @@ class CharactersListViewController: BaseViewController {
         tableView.dataSource = adapter
         tableView.delegate = adapter
         viewModel = CharactersListViewModel(delegate: self)
-        pageLabel.text = viewModel?.pageText
+        setupView()
         searchData()
     }
     
@@ -50,22 +60,75 @@ class CharactersListViewController: BaseViewController {
         searchData()
     }
     
+    @IBAction func filterButtonPressed(_ sender: Any) {
+        guard let viewModel = viewModel, let filteredText = filterTextField.text else {
+            return
+        }
+        viewModel.filterText = viewModel.filterText == filteredText ? "" : filteredText
+        searchData()
+    }
+    
+    @IBAction func removeRilterButtonPressed(_ sender: Any) {
+        filterTextField.text = ""
+        viewModel?.filterText = ""
+        searchData()
+    }
+    
+    @IBAction func filterValueChange(_ sender: Any) {
+        guard let viewModel = viewModel, let textToFilter = filterTextField.text else {
+            filterButton.isEnabled = false
+            return
+        }
+
+        removeFilterButton.isHidden = false
+        switch textToFilter {
+        case "":
+            if (viewModel.isFilteredResponse){
+                removeFilterButton.isHidden = true
+                filterButton.isEnabled = true
+            } else {
+                removeFilterButton.isHidden = true
+                filterButton.isEnabled = false
+            }
+            break
+        case viewModel.filterText:
+            if (viewModel.isFilteredResponse){
+                removeFilterButton.isHidden = false
+                filterButton.isEnabled = false
+            }
+            break
+        default:
+            removeFilterButton.isHidden = true
+            filterButton.isEnabled = true
+            break
+        }
+    }
+    
     // MARK: - public methods
     
     func searchData() {
         showLoading()
         viewModel?.loadData()
     }
+    
+    func setupView() {
+        titleLabel.text = viewModel?.pageText
+        filterButton.isEnabled = false
+        removeFilterButton.isHidden = true
+        filterTextField.placeholder = STRINGS.filterPlaceholder
+    }
 }
 
 extension CharactersListViewController: CharactersListViewModelDelegate {
     
     func onSuccess(responseCase: CharactersListResponse) {
-        pageLabel.text = viewModel?.pageText
         hideLoading()
         switch responseCase {
         case .loadData:
             if let viewModel = viewModel, let uiItems = viewModel.uiItems, let adapter = adapter {
+                titleLabel.text = viewModel.isFilteredResponse ? STRINGS.filtered : viewModel.pageText
+                filterButton.isEnabled = false
+                removeFilterButton.isHidden = viewModel.isFilteredResponse ? false : true
                 previousPageButton.isHidden = !viewModel.showPrev
                 nextPageButton.isHidden = !viewModel.showNext
                 adapter.items = uiItems

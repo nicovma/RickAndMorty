@@ -14,8 +14,15 @@ struct ENDPOINTS {
 }
 
 struct STRINGS {
+    // error
     static let errorTitle = "Error!"
     static let errorGenericDescription = "Unexpected error."
-    static let loading = "Loading"
+    
+    // loading
+    static let loading = "Loading..."
+    
+    // charactersListViewController
     static let page = "Page "
+    static let filterPlaceholder = "Search by name"
+    static let filtered = "Filter applied"
 }
