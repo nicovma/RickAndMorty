@@ -7,6 +7,11 @@
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="RickAndMortyFont.ttf">
+            <string>GetSchwifty-Regular</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -19,9 +24,27 @@
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tTx-cY-NRg">
                         <rect key="frame" x="16" y="4" width="361" height="36"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IWv-JG-tSM">
+                                <rect key="frame" x="8" y="9" width="41.333333333333336" height="18"/>
+                                <fontDescription key="fontDescription" name="GetSchwifty-Regular" family="Get Schwifty" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g3a-7j-yrm">
+                                <rect key="frame" x="57.333333333333329" y="9.6666666666666643" width="35.333333333333329" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" name="AccentColor"/>
                         <constraints>
+                            <constraint firstItem="IWv-JG-tSM" firstAttribute="centerY" secondItem="tTx-cY-NRg" secondAttribute="centerY" id="Ssi-Gp-Kih"/>
                             <constraint firstAttribute="height" constant="36" id="fCa-kz-wfq"/>
+                            <constraint firstItem="g3a-7j-yrm" firstAttribute="centerY" secondItem="IWv-JG-tSM" secondAttribute="centerY" id="hyU-d5-keR"/>
+                            <constraint firstItem="IWv-JG-tSM" firstAttribute="leading" secondItem="tTx-cY-NRg" secondAttribute="leading" constant="8" id="jyf-vV-Ykw"/>
+                            <constraint firstItem="g3a-7j-yrm" firstAttribute="leading" secondItem="IWv-JG-tSM" secondAttribute="trailing" constant="8" symbolic="YES" id="kUL-3O-Rnl"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -34,6 +57,8 @@
             </tableViewCellContentView>
             <connections>
                 <outlet property="containerView" destination="tTx-cY-NRg" id="AxP-2l-DN7"/>
+                <outlet property="titleLabel" destination="IWv-JG-tSM" id="W6c-Jb-j2M"/>
+                <outlet property="valueLabel" destination="g3a-7j-yrm" id="2bR-j2-lNY"/>
             </connections>
             <point key="canvasLocation" x="252.67175572519082" y="14.788732394366198"/>
         </tableViewCell>

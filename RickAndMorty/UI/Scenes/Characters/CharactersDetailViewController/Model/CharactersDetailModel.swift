@@ -8,10 +8,19 @@
 import Foundation
 
 enum CharacterDetailUIItem {
-    case image(String)
-    case basicInfo(CharacterBasicInfo)
+    case image(CharacterBasicInfo)
+    case basicInfo(CharacterClasificationInfo)
+    case episode(String)
+}
+
+struct CharacterClasificationInfo {
+    var name: String
+    var value: String?
 }
 
 struct CharacterBasicInfo {
     var name: String
+    var status: CharacterStatus
+    var date: String
+    var image: String
 }

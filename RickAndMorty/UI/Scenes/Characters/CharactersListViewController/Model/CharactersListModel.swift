@@ -16,7 +16,7 @@ struct CharacterUIItems: Decodable {
     var name: String
     var status: CharacterStatus
     var species: String
-    var type: String?
+    var type: String
     var image: String
 }
 
@@ -41,7 +41,7 @@ struct CharacterInformation: Decodable {
     var name: String
     var status: CharacterStatus
     var species: String
-    var type: String?
+    var type: String
     var gender: CharacterGender
     var origin: CharacterLocation
     var location: CharacterLocation

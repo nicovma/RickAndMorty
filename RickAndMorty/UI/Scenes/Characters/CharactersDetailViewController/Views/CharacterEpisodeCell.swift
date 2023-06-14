@@ -14,6 +14,7 @@ class CharacterEpisodeCell: UITableViewCell {
     
     @IBOutlet weak var containerView: UIView!
     
+    @IBOutlet weak var episodeTitle: UILabel!
     // MARK: - Lifecycle
     
     override func awakeFromNib() {
@@ -22,5 +23,11 @@ class CharacterEpisodeCell: UITableViewCell {
         containerView.layer.cornerRadius = 8
         containerView.layer.borderWidth = 1
         containerView.layer.borderColor = UIColor(named: "AccentColor")?.cgColor
+    }
+    
+    // MARK: - Public Methods
+    
+    func setItemInformation(itemInformation: String) {
+        episodeTitle.text = STRINGS.episodeTitle + itemInformation
     }
 }

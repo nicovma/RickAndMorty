@@ -211,7 +211,7 @@
                             <constraint firstItem="Kzh-Gp-krW" firstAttribute="trailing" secondItem="lNj-92-1Wz" secondAttribute="trailing" id="hPo-bN-bM2"/>
                             <constraint firstItem="lNj-92-1Wz" firstAttribute="leading" secondItem="Kzh-Gp-krW" secondAttribute="leading" id="jOK-gU-Mat"/>
                             <constraint firstItem="lNj-92-1Wz" firstAttribute="top" secondItem="Kzh-Gp-krW" secondAttribute="top" id="sem-Yq-H6v"/>
-                            <constraint firstItem="Kzh-Gp-krW" firstAttribute="bottom" secondItem="lNj-92-1Wz" secondAttribute="bottom" id="tpf-5E-8SP"/>
+                            <constraint firstAttribute="bottom" secondItem="lNj-92-1Wz" secondAttribute="bottom" id="tpf-5E-8SP"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="2VP-Xi-Qj5"/>

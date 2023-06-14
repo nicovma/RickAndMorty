@@ -14,17 +14,32 @@ struct ENDPOINTS {
 }
 
 struct STRINGS {
-    // error
+    // ErrorView
     static let errorTitle = "Error!"
     static let errorGenericDescription = "Unexpected error."
     
-    // loading
+    // LoadingView
     static let loading = "Loading..."
     
-    // charactersListViewController
+    // CharactersListViewController
     static let page = "Page "
     static let filterPlaceholder = "Search by name"
     static let filtered = "Filter applied"
     static let noCharacter = "No characters to show."
+    
+    
+    // CharacterImageCell
+    static let createdOn = "Created on "
+    
+    // CharactersDetailViewModel
+    static let specieTitle = "Specie:"
+    static let typeTitle = "Type:"
+    static let genderTitle = "Gender:"
+    static let originTitle = "Origin:"
+    static let locationTitle = "Location:"
+    static let episodesTitle = "Episodes"
+    static let episodeTitle = "Episode "
+    static let unknownValue = "Unknown "
+    
     
 }

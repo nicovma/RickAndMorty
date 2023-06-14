@@ -26,5 +26,31 @@ class CharacterImageCell: UITableViewCell {
         super.awakeFromNib()
         selectionStyle = .none
         statusView.layer.cornerRadius = 7
+        mainImageView.layer.cornerRadius = 8
+    }
+    
+    // MARK: - Public Methods
+    
+    func setItemInformation(itemInformation: CharacterBasicInfo) {
+        mainImageView.loadAvatar(url: URL.init(string: itemInformation.image)!, placeholder: "person.fill")
+        
+        nameLabel.text = itemInformation.name
+        statusLabel.text = itemInformation.status.rawValue
+        
+        // TODO: Date Format
+        creationDateLabel.text = STRINGS.createdOn + itemInformation.date
+        
+        switch itemInformation.status {
+        case .dead:
+            statusView.backgroundColor = UIColor.red
+            break
+        case .alive:
+            statusView.backgroundColor = UIColor.green
+            break
+        case .unknown:
+            statusView.backgroundColor = UIColor.gray
+            break
+        }
+        
     }
 }
