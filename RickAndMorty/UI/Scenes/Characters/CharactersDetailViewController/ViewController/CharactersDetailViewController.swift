@@ -25,6 +25,7 @@ class CharactersDetailViewController: BaseViewController {
         super.viewDidLoad()
         tableView.register(cell: CharacterImageCell.self)
         tableView.register(cell: CharacterClasificationCell.self)
+        tableView.register(cell: CharacterEpisodeCell.self)
         tableView.separatorStyle = .none
         tableView.dataSource = adapter
         tableView.delegate = adapter

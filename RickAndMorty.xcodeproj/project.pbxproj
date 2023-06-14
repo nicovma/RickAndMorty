@@ -16,6 +16,8 @@
 		4A561B262A39EF5A009ECBF3 /* CharacterImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A561B252A39EF5A009ECBF3 /* CharacterImageCell.xib */; };
 		4A561B282A39F58C009ECBF3 /* CharacterClasificationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A561B272A39F58C009ECBF3 /* CharacterClasificationCell.swift */; };
 		4A561B2A2A39F596009ECBF3 /* CharacterClasificationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A561B292A39F596009ECBF3 /* CharacterClasificationCell.xib */; };
+		4A561B2C2A3A0413009ECBF3 /* CharacterEpisodeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A561B2B2A3A0413009ECBF3 /* CharacterEpisodeCell.swift */; };
+		4A561B2E2A3A041C009ECBF3 /* CharacterEpisodeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A561B2D2A3A041C009ECBF3 /* CharacterEpisodeCell.xib */; };
 		4A8437BF2A37AB71005B7C57 /* UIView+LoadFromNib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8437BE2A37AB71005B7C57 /* UIView+LoadFromNib.swift */; };
 		4A8437C12A37AB9B005B7C57 /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8437C02A37AB9B005B7C57 /* UITableView+Extension.swift */; };
 		4A8437C32A37ABB3005B7C57 /* UIImageView+Download.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8437C22A37ABB3005B7C57 /* UIImageView+Download.swift */; };
@@ -77,6 +79,8 @@
 		4A561B252A39EF5A009ECBF3 /* CharacterImageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CharacterImageCell.xib; sourceTree = "<group>"; };
 		4A561B272A39F58C009ECBF3 /* CharacterClasificationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterClasificationCell.swift; sourceTree = "<group>"; };
 		4A561B292A39F596009ECBF3 /* CharacterClasificationCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CharacterClasificationCell.xib; sourceTree = "<group>"; };
+		4A561B2B2A3A0413009ECBF3 /* CharacterEpisodeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterEpisodeCell.swift; sourceTree = "<group>"; };
+		4A561B2D2A3A041C009ECBF3 /* CharacterEpisodeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CharacterEpisodeCell.xib; sourceTree = "<group>"; };
 		4A8437BE2A37AB71005B7C57 /* UIView+LoadFromNib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+LoadFromNib.swift"; sourceTree = "<group>"; };
 		4A8437C02A37AB9B005B7C57 /* UITableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
 		4A8437C22A37ABB3005B7C57 /* UIImageView+Download.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Download.swift"; sourceTree = "<group>"; };
@@ -389,6 +393,8 @@
 				4A561B252A39EF5A009ECBF3 /* CharacterImageCell.xib */,
 				4A561B272A39F58C009ECBF3 /* CharacterClasificationCell.swift */,
 				4A561B292A39F596009ECBF3 /* CharacterClasificationCell.xib */,
+				4A561B2B2A3A0413009ECBF3 /* CharacterEpisodeCell.swift */,
+				4A561B2D2A3A041C009ECBF3 /* CharacterEpisodeCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -553,6 +559,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4ABFA6C12A37A21D00A29CC7 /* LaunchScreen.storyboard in Resources */,
+				4A561B2E2A3A041C009ECBF3 /* CharacterEpisodeCell.xib in Resources */,
 				4A561B2A2A39F596009ECBF3 /* CharacterClasificationCell.xib in Resources */,
 				4A561B262A39EF5A009ECBF3 /* CharacterImageCell.xib in Resources */,
 				4AE0E9772A37BB83006A1676 /* CharacterCell.xib in Resources */,
@@ -701,6 +708,7 @@
 				4A8437C52A37ACA9005B7C57 /* CharactersListViewController.swift in Sources */,
 				4A8437C12A37AB9B005B7C57 /* UITableView+Extension.swift in Sources */,
 				4A561B242A39EF4D009ECBF3 /* CharacterImageCell.swift in Sources */,
+				4A561B2C2A3A0413009ECBF3 /* CharacterEpisodeCell.swift in Sources */,
 				4A4310182A39204200DE4D0D /* CharactersDetailViewModel.swift in Sources */,
 				4A43101D2A3929B100DE4D0D /* CharactersDetailViewAdapter.swift in Sources */,
 				4AE0E9812A391DB2006A1676 /* NoCharacterCell.swift in Sources */,

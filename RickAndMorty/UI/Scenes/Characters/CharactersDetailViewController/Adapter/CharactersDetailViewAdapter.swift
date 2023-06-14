@@ -24,7 +24,11 @@ extension CharactersDetailViewAdapter: UITableViewDataSource, UITableViewDelegat
         if indexPath.row == 0 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "CharacterImageCell", for: indexPath) as! CharacterImageCell
             return cell
-        } else {
+        }
+        if indexPath.row == 6 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "CharacterEpisodeCell", for: indexPath) as! CharacterEpisodeCell
+            return cell
+        }else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "CharacterClasificationCell", for: indexPath) as! CharacterClasificationCell
             return cell
         }
@@ -33,6 +37,6 @@ extension CharactersDetailViewAdapter: UITableViewDataSource, UITableViewDelegat
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return 7
     }
 }

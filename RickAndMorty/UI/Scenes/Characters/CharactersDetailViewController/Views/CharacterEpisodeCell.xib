@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="3oP-df-7Z0" customClass="CharacterEpisodeCell" customModule="RickAndMorty" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="44"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3oP-df-7Z0" id="Noc-fn-oRO">
+                <rect key="frame" x="0.0" y="0.0" width="393" height="44"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N22-Ol-cbX">
+                        <rect key="frame" x="16" y="4" width="361" height="36"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="36" id="C9X-Vc-GIi"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="N22-Ol-cbX" firstAttribute="leading" secondItem="Noc-fn-oRO" secondAttribute="leading" constant="16" id="PVk-kw-xlm"/>
+                    <constraint firstAttribute="trailing" secondItem="N22-Ol-cbX" secondAttribute="trailing" constant="16" id="XAD-jn-hwv"/>
+                    <constraint firstItem="N22-Ol-cbX" firstAttribute="top" secondItem="Noc-fn-oRO" secondAttribute="top" constant="4" id="ZOe-v7-fEA"/>
+                    <constraint firstAttribute="bottom" secondItem="N22-Ol-cbX" secondAttribute="bottom" constant="4" id="aUY-Jq-3BA"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="containerView" destination="N22-Ol-cbX" id="EEB-K9-JbS"/>
+            </connections>
+            <point key="canvasLocation" x="252.67175572519082" y="14.788732394366198"/>
+        </tableViewCell>
+    </objects>
+</document>
