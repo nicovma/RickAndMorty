@@ -18,6 +18,7 @@
 		4A561B2A2A39F596009ECBF3 /* CharacterClasificationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A561B292A39F596009ECBF3 /* CharacterClasificationCell.xib */; };
 		4A561B2C2A3A0413009ECBF3 /* CharacterEpisodeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A561B2B2A3A0413009ECBF3 /* CharacterEpisodeCell.swift */; };
 		4A561B2E2A3A041C009ECBF3 /* CharacterEpisodeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A561B2D2A3A041C009ECBF3 /* CharacterEpisodeCell.xib */; };
+		4A561B302A3A23CE009ECBF3 /* splashIcon.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 4A561B2F2A3A23CE009ECBF3 /* splashIcon.jpeg */; };
 		4A8437BF2A37AB71005B7C57 /* UIView+LoadFromNib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8437BE2A37AB71005B7C57 /* UIView+LoadFromNib.swift */; };
 		4A8437C12A37AB9B005B7C57 /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8437C02A37AB9B005B7C57 /* UITableView+Extension.swift */; };
 		4A8437C32A37ABB3005B7C57 /* UIImageView+Download.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8437C22A37ABB3005B7C57 /* UIImageView+Download.swift */; };
@@ -81,6 +82,7 @@
 		4A561B292A39F596009ECBF3 /* CharacterClasificationCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CharacterClasificationCell.xib; sourceTree = "<group>"; };
 		4A561B2B2A3A0413009ECBF3 /* CharacterEpisodeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterEpisodeCell.swift; sourceTree = "<group>"; };
 		4A561B2D2A3A041C009ECBF3 /* CharacterEpisodeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CharacterEpisodeCell.xib; sourceTree = "<group>"; };
+		4A561B2F2A3A23CE009ECBF3 /* splashIcon.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = splashIcon.jpeg; sourceTree = "<group>"; };
 		4A8437BE2A37AB71005B7C57 /* UIView+LoadFromNib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+LoadFromNib.swift"; sourceTree = "<group>"; };
 		4A8437C02A37AB9B005B7C57 /* UITableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
 		4A8437C22A37ABB3005B7C57 /* UIImageView+Download.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Download.swift"; sourceTree = "<group>"; };
@@ -234,6 +236,7 @@
 				4AE0E97E2A3901BE006A1676 /* Constants.swift */,
 				4ABFA6B42A37A21B00A29CC7 /* AppDelegate.swift */,
 				4ABFA6B62A37A21B00A29CC7 /* SceneDelegate.swift */,
+				4A561B2F2A3A23CE009ECBF3 /* splashIcon.jpeg */,
 				4ABFA6BD2A37A21D00A29CC7 /* Assets.xcassets */,
 				4ABFA6BF2A37A21D00A29CC7 /* LaunchScreen.storyboard */,
 				4ABFA6C22A37A21D00A29CC7 /* Info.plist */,
@@ -569,6 +572,7 @@
 				4A8437D12A37AD59005B7C57 /* ErrorView.xib in Resources */,
 				4A561B222A39EB11009ECBF3 /* RickAndMortyFont.ttf in Resources */,
 				4A8437D62A37AFB8005B7C57 /* LoadingView.xib in Resources */,
+				4A561B302A3A23CE009ECBF3 /* splashIcon.jpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
