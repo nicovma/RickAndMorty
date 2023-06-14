@@ -23,6 +23,8 @@ class CharacterImageCell: UITableViewCell {
     // MARK: - Lifecycle
     
     override func awakeFromNib() {
+        super.awakeFromNib()
+        selectionStyle = .none
         statusView.layer.cornerRadius = 7
     }
 }
