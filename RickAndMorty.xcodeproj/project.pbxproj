@@ -12,6 +12,8 @@
 		4A43101D2A3929B100DE4D0D /* CharactersDetailViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A43101C2A3929B100DE4D0D /* CharactersDetailViewAdapter.swift */; };
 		4A43101F2A392ACB00DE4D0D /* CharactersDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A43101E2A392ACB00DE4D0D /* CharactersDetailModel.swift */; };
 		4A561B222A39EB11009ECBF3 /* RickAndMortyFont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4A561B212A39EB11009ECBF3 /* RickAndMortyFont.ttf */; };
+		4A561B242A39EF4D009ECBF3 /* CharacterImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A561B232A39EF4D009ECBF3 /* CharacterImageCell.swift */; };
+		4A561B262A39EF5A009ECBF3 /* CharacterImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A561B252A39EF5A009ECBF3 /* CharacterImageCell.xib */; };
 		4A8437BF2A37AB71005B7C57 /* UIView+LoadFromNib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8437BE2A37AB71005B7C57 /* UIView+LoadFromNib.swift */; };
 		4A8437C12A37AB9B005B7C57 /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8437C02A37AB9B005B7C57 /* UITableView+Extension.swift */; };
 		4A8437C32A37ABB3005B7C57 /* UIImageView+Download.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8437C22A37ABB3005B7C57 /* UIImageView+Download.swift */; };
@@ -69,6 +71,8 @@
 		4A43101C2A3929B100DE4D0D /* CharactersDetailViewAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersDetailViewAdapter.swift; sourceTree = "<group>"; };
 		4A43101E2A392ACB00DE4D0D /* CharactersDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersDetailModel.swift; sourceTree = "<group>"; };
 		4A561B212A39EB11009ECBF3 /* RickAndMortyFont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = RickAndMortyFont.ttf; sourceTree = "<group>"; };
+		4A561B232A39EF4D009ECBF3 /* CharacterImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterImageCell.swift; sourceTree = "<group>"; };
+		4A561B252A39EF5A009ECBF3 /* CharacterImageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CharacterImageCell.xib; sourceTree = "<group>"; };
 		4A8437BE2A37AB71005B7C57 /* UIView+LoadFromNib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+LoadFromNib.swift"; sourceTree = "<group>"; };
 		4A8437C02A37AB9B005B7C57 /* UITableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
 		4A8437C22A37ABB3005B7C57 /* UIImageView+Download.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Download.swift"; sourceTree = "<group>"; };
@@ -377,6 +381,8 @@
 		4ABFA6F42A37A35300A29CC7 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				4A561B232A39EF4D009ECBF3 /* CharacterImageCell.swift */,
+				4A561B252A39EF5A009ECBF3 /* CharacterImageCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -541,6 +547,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4ABFA6C12A37A21D00A29CC7 /* LaunchScreen.storyboard in Resources */,
+				4A561B262A39EF5A009ECBF3 /* CharacterImageCell.xib in Resources */,
 				4AE0E9772A37BB83006A1676 /* CharacterCell.xib in Resources */,
 				4ABFA6F92A37A39A00A29CC7 /* CharactersViewController.storyboard in Resources */,
 				4AE0E9832A391DBD006A1676 /* NoCharacterCell.xib in Resources */,
@@ -685,6 +692,7 @@
 				4AE0E9792A37BE06006A1676 /* CharactersListViewAdapter.swift in Sources */,
 				4A8437C52A37ACA9005B7C57 /* CharactersListViewController.swift in Sources */,
 				4A8437C12A37AB9B005B7C57 /* UITableView+Extension.swift in Sources */,
+				4A561B242A39EF4D009ECBF3 /* CharacterImageCell.swift in Sources */,
 				4A4310182A39204200DE4D0D /* CharactersDetailViewModel.swift in Sources */,
 				4A43101D2A3929B100DE4D0D /* CharactersDetailViewAdapter.swift in Sources */,
 				4AE0E9812A391DB2006A1676 /* NoCharacterCell.swift in Sources */,

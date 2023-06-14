@@ -23,7 +23,7 @@ class CharactersDetailViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        tableView.register(cell: NoCharacterCell.self)
+        tableView.register(cell: CharacterImageCell.self)
         tableView.separatorStyle = .none
         tableView.dataSource = adapter
         tableView.delegate = adapter

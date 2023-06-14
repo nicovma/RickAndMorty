@@ -13,16 +13,11 @@ class NoCharacterCell: UITableViewCell {
     // MARK: - Outlets
     @IBOutlet weak var noCharacterLabel: UILabel!
     
-    
     // MARK: - Lifecycle
     
     override func awakeFromNib() {
         super.awakeFromNib()
         selectionStyle = .none
-    }
-    
-    // MARK: - Public Methods
-    
-    func setItemInformation(itemInformation: CharacterUIItems) {
+        noCharacterLabel.text = STRINGS.noCharacter
     }
 }

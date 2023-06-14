@@ -21,19 +21,12 @@ class CharactersDetailViewAdapter: NSObject {
 
 extension CharactersDetailViewAdapter: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        switch items[indexPath.row] {
-        case .image(let url):
-            print()
-            break
-        case .basicInfo(let characterBasicInfo):
-            print()
-            break
-        }
-        return UITableViewCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CharacterImageCell", for: indexPath) as! CharacterImageCell
+        return cell
     }
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        items.count
+        return 1
     }
 }

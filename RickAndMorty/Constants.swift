@@ -25,4 +25,6 @@ struct STRINGS {
     static let page = "Page "
     static let filterPlaceholder = "Search by name"
     static let filtered = "Filter applied"
+    static let noCharacter = "No characters to show."
+    
 }
