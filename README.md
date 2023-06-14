@@ -5,11 +5,13 @@ This iOS application serves as a comprehensive guide to all the captivating char
 ## Installation
 
 Follow these steps to clone and set up the application in your local environment:
-
+<br>
 git clone https://github.com/nicovma/RickAndMorty.git
+<br>
 cd RickAndMorty
+<br>
 pod install
-
+<br>
 
 Open the `RickAndMorty.xcworkspace` file in Xcode and build the application on the simulator or device of your choice.
 
