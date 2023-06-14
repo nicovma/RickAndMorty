@@ -10,6 +10,11 @@
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="RickAndMortyFont.ttf">
+            <string>GetSchwifty-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Characters List View Controller-->
         <scene sceneID="s0d-6b-0kx">
@@ -30,7 +35,7 @@
                                 <rect key="frame" x="-11" y="0.0" width="414" height="90"/>
                                 <subviews>
                                     <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sxx-kO-OtD">
-                                        <rect key="frame" x="348" y="38.666666666666664" width="50" height="49.999999999999993"/>
+                                        <rect key="frame" x="348" y="50.666666666666657" width="50" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="HgD-e3-qir"/>
                                             <constraint firstAttribute="width" constant="50" id="ghu-nX-rOD"/>
@@ -42,13 +47,13 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PAGE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MUE-P6-Osb">
-                                        <rect key="frame" x="185" y="53" width="44.333333333333343" height="21"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <rect key="frame" x="180.66666666666666" y="61" width="52.666666666666657" height="29"/>
+                                        <fontDescription key="fontDescription" name="GetSchwifty-Regular" family="Get Schwifty" pointSize="29"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ruz-Ou-T7k">
-                                        <rect key="frame" x="16" y="38.666666666666664" width="50" height="49.999999999999993"/>
+                                        <rect key="frame" x="16" y="50.666666666666657" width="50" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="50" id="FRL-EE-0tb"/>
                                             <constraint firstAttribute="height" constant="50" id="IDa-cP-kxQ"/>
@@ -65,7 +70,7 @@
                                     <constraint firstItem="ruz-Ou-T7k" firstAttribute="centerY" secondItem="MUE-P6-Osb" secondAttribute="centerY" id="0h7-H6-uQu"/>
                                     <constraint firstItem="sxx-kO-OtD" firstAttribute="centerY" secondItem="MUE-P6-Osb" secondAttribute="centerY" id="Dud-ps-zt5"/>
                                     <constraint firstItem="MUE-P6-Osb" firstAttribute="centerX" secondItem="DnD-LQ-hYd" secondAttribute="centerX" id="FTH-Zn-Azv"/>
-                                    <constraint firstAttribute="bottom" secondItem="MUE-P6-Osb" secondAttribute="bottom" constant="16" id="Nu9-Yb-4Sg"/>
+                                    <constraint firstAttribute="bottom" secondItem="MUE-P6-Osb" secondAttribute="bottom" id="Nu9-Yb-4Sg"/>
                                     <constraint firstItem="ruz-Ou-T7k" firstAttribute="leading" secondItem="DnD-LQ-hYd" secondAttribute="leading" constant="16" id="QEK-KY-FQ7"/>
                                     <constraint firstAttribute="height" constant="90" id="VUW-kC-aAj"/>
                                     <constraint firstAttribute="trailing" secondItem="sxx-kO-OtD" secondAttribute="trailing" constant="16" id="vPQ-4o-02k"/>

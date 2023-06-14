@@ -11,6 +11,7 @@
 		4A4310182A39204200DE4D0D /* CharactersDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4310172A39204200DE4D0D /* CharactersDetailViewModel.swift */; };
 		4A43101D2A3929B100DE4D0D /* CharactersDetailViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A43101C2A3929B100DE4D0D /* CharactersDetailViewAdapter.swift */; };
 		4A43101F2A392ACB00DE4D0D /* CharactersDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A43101E2A392ACB00DE4D0D /* CharactersDetailModel.swift */; };
+		4A561B222A39EB11009ECBF3 /* RickAndMortyFont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4A561B212A39EB11009ECBF3 /* RickAndMortyFont.ttf */; };
 		4A8437BF2A37AB71005B7C57 /* UIView+LoadFromNib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8437BE2A37AB71005B7C57 /* UIView+LoadFromNib.swift */; };
 		4A8437C12A37AB9B005B7C57 /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8437C02A37AB9B005B7C57 /* UITableView+Extension.swift */; };
 		4A8437C32A37ABB3005B7C57 /* UIImageView+Download.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8437C22A37ABB3005B7C57 /* UIImageView+Download.swift */; };
@@ -67,6 +68,7 @@
 		4A4310172A39204200DE4D0D /* CharactersDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersDetailViewModel.swift; sourceTree = "<group>"; };
 		4A43101C2A3929B100DE4D0D /* CharactersDetailViewAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersDetailViewAdapter.swift; sourceTree = "<group>"; };
 		4A43101E2A392ACB00DE4D0D /* CharactersDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersDetailModel.swift; sourceTree = "<group>"; };
+		4A561B212A39EB11009ECBF3 /* RickAndMortyFont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = RickAndMortyFont.ttf; sourceTree = "<group>"; };
 		4A8437BE2A37AB71005B7C57 /* UIView+LoadFromNib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+LoadFromNib.swift"; sourceTree = "<group>"; };
 		4A8437C02A37AB9B005B7C57 /* UITableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
 		4A8437C22A37ABB3005B7C57 /* UIImageView+Download.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Download.swift"; sourceTree = "<group>"; };
@@ -137,6 +139,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4A561B1E2A39E93A009ECBF3 /* Resourses */ = {
+			isa = PBXGroup;
+			children = (
+				4A561B1F2A39E944009ECBF3 /* Fonts */,
+			);
+			path = Resourses;
+			sourceTree = "<group>";
+		};
+		4A561B1F2A39E944009ECBF3 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				4A561B212A39EB11009ECBF3 /* RickAndMortyFont.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		4A8437C82A37ACFD005B7C57 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -198,6 +216,7 @@
 		4ABFA6B32A37A21B00A29CC7 /* RickAndMorty */ = {
 			isa = PBXGroup;
 			children = (
+				4A561B1E2A39E93A009ECBF3 /* Resourses */,
 				4ABFA6E62A37A26600A29CC7 /* UI */,
 				4ABFA6E42A37A24500A29CC7 /* Extensions */,
 				4AE0E97E2A3901BE006A1676 /* Constants.swift */,
@@ -527,6 +546,7 @@
 				4AE0E9832A391DBD006A1676 /* NoCharacterCell.xib in Resources */,
 				4ABFA6BE2A37A21D00A29CC7 /* Assets.xcassets in Resources */,
 				4A8437D12A37AD59005B7C57 /* ErrorView.xib in Resources */,
+				4A561B222A39EB11009ECBF3 /* RickAndMortyFont.ttf in Resources */,
 				4A8437D62A37AFB8005B7C57 /* LoadingView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
