@@ -47,5 +47,3 @@ If you have any questions, suggestions, or issues, you can reach me through the 
 
 Thank you for your interest in the application! I hope you enjoy working with it.
 
--
-
