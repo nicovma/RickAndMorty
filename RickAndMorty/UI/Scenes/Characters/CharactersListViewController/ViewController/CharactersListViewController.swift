@@ -27,7 +27,6 @@ class CharactersListViewController: BaseViewController {
     @IBOutlet weak var filterButton: UIButton!
     @IBOutlet weak var removeFilterButton: UIButton!
     
-    
     // MARK: - Properties
     
     private var adapter: CharactersListViewAdapter?
@@ -64,7 +63,7 @@ class CharactersListViewController: BaseViewController {
         guard let viewModel = viewModel, let filteredText = filterTextField.text else {
             return
         }
-        viewModel.filterText = viewModel.filterText == filteredText ? "" : filteredText
+        viewModel.filterText = filteredText
         searchData()
     }
     
